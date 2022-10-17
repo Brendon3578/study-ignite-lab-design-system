@@ -4,8 +4,8 @@ import { App } from "./App";
 
 async function main() {
   if (process.env.NODE_ENV === "development") {
-    if (window.location.pathname === "/") {
-      window.location.pathname = "/";
+    if (window.location.pathname === "/study-ignite-lab-design-system") {
+      window.location.pathname = "/study-ignite-lab-design-system";
       return;
     }
     const { worker } = require("./mocks/browser");
