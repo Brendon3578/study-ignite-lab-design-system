@@ -3,6 +3,7 @@ import { SignIn } from "./SignIn";
 import { within, userEvent, waitFor } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 import { rest } from "msw";
+import { handlers } from "../../mocks/handlers";
 
 export default {
   title: "Pages/Sign in",
@@ -11,15 +12,7 @@ export default {
   argTypes: {},
   parameters: {
     msw: {
-      handlers: [
-        rest.post("/sessions", (req, res, ctx) => {
-          return res(
-            ctx.json({
-              message: "Login realizado!",
-            })
-          );
-        }),
-      ],
+      handlers: handlers,
     },
   },
 } as Meta;
