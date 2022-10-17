@@ -15,14 +15,18 @@ export interface TextInputIconProps {
 
 function TextInputRoot(props: TextInputRootProps) {
   return (
-    <div className="flex items-center h-12 gap-3 py-4 px-3 w-full rounded bg-gray-800 focus-within:ring-2 ring-cyan-300">
+    <div className="flex items-center h-10 lg:h-12 gap-3 py-3 px-2 lg:py-4 lg:px-3 w-full rounded bg-gray-800 focus-within:ring-2 ring-cyan-300">
       {props.children}
     </div>
   );
 }
 
 function TextInputIcon(props: TextInputIconProps) {
-  return <Slot className="w-6 h-6 text-gray-400">{props.children}</Slot>;
+  return (
+    <Slot className="w-5 h-5 lg:w-6 lg:h-6 text-gray-400">
+      {props.children}
+    </Slot>
+  );
 }
 
 function TextInputInput(props: TextInputInputProps) {

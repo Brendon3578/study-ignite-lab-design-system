@@ -21,6 +21,7 @@ module.exports = {
       },
     },
     fontSize: {
+      "2xs": 12,
       xs: 14,
       sm: 16,
       md: 18,
@@ -31,6 +32,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: "Inter, sans-serif",
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },
